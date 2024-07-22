@@ -1,1 +1,1 @@
-Easily update modpacks to diffrent Minecraft versions with the modrinth api.
+Easily update modpacks to different Minecraft versions with the modrinth api.
