@@ -1,0 +1,12 @@
+{
+  # the name of your desired mods on sodium separated by ','
+  "mods": [
+    "sodium"
+  ],
+  # the versions of minecraft for which you want to download the mods "NEWEST" for newest (full) version
+  "versions": [
+    "1.21", "1.18", "NEWEST"
+  ],
+  # where the mods will be saved, separated into version folders 'CURRENT' for current folder
+  "path": 'CURRENT/mods'
+}
