@@ -22,8 +22,7 @@ def update_all():
             if not 'pre' in i and not 'rc' in i:
                 newest = i
 
-    versions = [newest if item == 'NEWEST' else item for item in versions]
-    versions = list(set(versions))
+    versions = [[newest, item[1]] if 'NEWEST' in item else item for item in versions]
     mods, old = update(mods, versions, get_old(config['path']))
     download(mods, config['path'], old)
 
@@ -37,18 +36,20 @@ def update(mods: list, aversions: list, old: list):
                 print(f"{mod} not found!")
                 continue
             j = json.loads(req.content)
+            print(j[0])
             for i in j:
                 for version in versions:
-                    if version in i['game_versions']:
-                        if i['version_type'] == 'release':
+                    if version[0] in i['game_versions']:
+                        print(version)
+                        if version[1] in i['loaders']:
                             versions.remove(version)
-                        if not i['files'][0]['filename'] in old[0]:
-                            to_update.append(
-                                {'url': i['files'][0]['url'], 'name': i['files'][0]['filename'], 'version': version})
-                        else:
-                            index = old[0].index(i['files'][0]['filename'])
-                            del old[0][index]
-                            del old[1][index]
+                            if not i['files'][0]['filename'] in old[0]:
+                                to_update.append(
+                                    {'url': i['files'][0]['url'], 'name': i['files'][0]['filename'], 'version': version})
+                            else:
+                                index = old[0].index(i['files'][0]['filename'])
+                                del old[0][index]
+                                del old[1][index]
     return to_update, old
 
 
