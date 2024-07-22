@@ -1,12 +1,12 @@
 {
-  # the name of your desired mods on sodium separated by ','
+  # The name of your desired mods on Modrinth separated by ','.
   "mods": [
     "sodium"
   ],
-  # the versions of minecraft for which you want to download the mods "NEWEST" for newest (full) version
+  # The versions of minecraft for which you want to download the mods. Use "NEWEST" for the newest (full) version
   "versions": [
     "1.21", "1.18", "NEWEST"
   ],
-  # where the mods will be saved, separated into version folders 'CURRENT' for current folder
+  # Where the mods will be saved, separated into version folders. Use 'CURRENT' for current folder.
   "path": 'CURRENT/mods'
 }
