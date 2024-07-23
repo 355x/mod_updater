@@ -1,4 +1,4 @@
-Easily update modpacks to different Minecraft versions with the Modrinth API (Labyrinth).
+Easily update modpacks to different Minecraft versions with the Modrinth API (Labrinth).
 
 
 How to use:
