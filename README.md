@@ -3,7 +3,6 @@ Easily update modpacks to different Minecraft versions with the Modrinth API (La
 
 
 How to use:
-
 Install the 'mod.py', the 'requirements.txt' file and the config folder.
 Use the 'requirements.txt' file by opening the terminal in the directory and typing 'pip install -r requirements.txt'.
 Alternatively you can install the requirements manually by typing 'pip install requests' and 'pip install pyyaml' in the terminal.
