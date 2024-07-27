@@ -41,7 +41,7 @@ def update_all():
 def update(mods: list, aversions: list, old: list):
     to_update = []
     for mod in mods:
-        versions = aversions
+        versions = aversions.copy()
         with requests.get(f"https://api.modrinth.com/v2/project/{mod}/version") as req:
             if not req.ok:
                 print(f"{mod} not found!")
